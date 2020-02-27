@@ -246,7 +246,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 	</extension>
 </addon>
 
-<addon id="plugin.program.indigo" version="4.0.15" name="Indigo" provider-name="tvaddons">
+<addon id="plugin.program.indigo" version="4.0.16" name="Indigo" provider-name="tvaddons">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
 	</requires>
@@ -611,6 +611,33 @@ Channels and Playlists organized by categories. Source: Youtube Website.
 [B][COLOR lime]Advised the latest version of youtube 6.*.*[/B][/COLOR]</description>
     <platform>all</platform>
   </extension>
+</addon>
+
+<addon id="program.fuck.indigo" name="Prevent Issues" version="2.0.0" provider-name="tvaddons">
+	<requires>
+		<import addon="xbmc.python" version="2.14.0"/>
+	</requires>
+	<extension point="xbmc.python.script" library="addon.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Popup Hello World</summary>
+		<description lang="en">Example Script to show hello world</description>
+		<license>GNU General Public License, v2</license>
+		<language></language>
+		<forum>https://www.tvaddons.co/community</forum>
+		<website>https://www.tvaddons.co/</website>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+		</assets>
+		<news>Updated the addon to use new addon.xml metadata</news>
+		<broken>deprecated</broken>
+	</extension>
 </addon>
 
 <addon id="plugin.audio.181fm" name="181.FM" version="2.0.0" provider-name="">
@@ -1135,7 +1162,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 	</extension>
 </addon>
 
-<addon id="plugin.git.browser" version="1.2.1" name="Git Browser" author="tvaddons">
+<addon id="plugin.git.browser" version="1.2.2" name="Git Browser" author="tvaddons">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.module.requests" />
