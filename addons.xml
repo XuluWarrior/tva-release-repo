@@ -131,6 +131,51 @@
     </extension>
 </addon>
 
+<addon id="plugin.program.yt-setup" name="Youtube Setup" version="1.1.1" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+        <import addon="plugin.video.youtube" version="5.4.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">Youtube Setup program addon</summary>
+        <description lang="en_GB">This addon will help you setup Youtube api keys.</description>
+        <disclaimer lang="en_GB">This addon is provided "as is". Please read LICENCE for more details.</disclaimer>
+        <summary lang="el_GR">Βοηθητικό πρόσθετο ρύθμισης Youtube</summary>
+        <description lang="el_GR">Το πρόσθετο αυτό θα σας βοηθήσει να ρυθμίσετε τα κλειδιά API του Youtube.</description>
+        <disclaimer lang="el_GR">Το παρόν πρόσθετο παρέχεται "όπως είναι". Παρακαλώ διαβάστε το αρχείο LICENCE για περισσότερες λεπτομέρειες.</disclaimer>
+        <license>GNU GPL, version 2</license>
+        <website>https://twitter.com/TwilightZer0</website>
+        <source>https://github.com/Twilight0/plugin.program.yt-setup</source>
+        <news>
+[B]+ 1.1.1[/B] ~ (26-09-2017)
+- Minor fix for plain txt files detection
+
+[B]+ 1.1.0[/B] ~ (25-09-2017)
+- Added support for Ubuntu's pastebin
+- Added optional route call method for post-5.4.3 versions of youtube addon
+- Simplified file detection method
+- Added strip method for new lines at the end of files
+- Examples are now using Windows end-of-line
+- Cosmetics
+
+[B]+ 1.0.1[/B] ~ (07-09-2017)
+- Added substitute argument for users that do not enter pastebin's &amp; debian's raw addresses
+- Added option for disabling youtube's setup wizard
+
+[B]+ 1.0.0[/B] ~ (04-09-2017)
+- Initial Version
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="plugin.program.advancedsettings"
        name="Easy Advanced Settings"
        version="0.8.8"
@@ -1297,7 +1342,7 @@ v5.2.14 (2017-01-23)
 	</extension>
 </addon>
 
-<addon id="plugin.video.netflix" name="Netflix" version="0.16.2" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
+<addon id="plugin.video.netflix" name="Netflix" version="1.0.0" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
     <import addon="script.module.addon.signals" version="0.0.3"/>
@@ -1313,6 +1358,9 @@ v5.2.14 (2017-01-23)
   <extension point="xbmc.python.module" library="modules/mysql-connector-python"/>
   <extension point="xbmc.addon.metadata">
     <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="cs_CZ">Netflix</summary>
+    <description lang="cs_CZ">Plugin pro sledování filmů, seriálů online z Netflixu</description>
+    <disclaimer lang="cs_CZ">Některé části tohoto doplňku nemusí být ve vaší zemi pobytu legální - před instalací dbejte na vaše zákony.</disclaimer>
     <summary lang="de_DE">Netflix</summary>
     <description lang="de_DE">Addon für Netflix VOD Services</description>
     <disclaimer lang="de_DE">Möglicherweise sind einge Teile dieses Addons in Ihrem Land illegal, Sie sollten dies unbedingt vor der Installation überprüfen.</disclaimer>
@@ -1333,6 +1381,9 @@ v5.2.14 (2017-01-23)
     <summary lang="hu_HU">Netflix</summary>
     <description lang="hu_HU">Netflix VOD kiegészítő a Kodihoz</description>
     <disclaimer lang="hu_HU">Előfordulhat, hogy a kiegészítő néhány része nem törvényes az Ön országában - telepítés előtt tájékozódjon a helyi törvényekről.</disclaimer>
+    <summary lang="tr_tr">Netflix</summary>
+    <description lang="tr_tr">Netflix VOD Hizmetleri Eklentisi</description>
+    <disclaimer lang="tr_tr">Bu eklentinin bazı bölümleri ikamet ettiğiniz ülkede yasal olmayabilir - lütfen yüklemeden önce yerel yasalarınıza bakın.</disclaimer>
     <assets>
       <icon>resources/media/icon.png</icon>
       <fanart>resources/media/fanart.jpg</fanart>
@@ -1342,7 +1393,7 @@ v5.2.14 (2017-01-23)
       <screenshot>resources/media/screenshot-04.jpg</screenshot>
       <screenshot>resources/media/screenshot-05.jpg</screenshot>
     </assets>
-    <language>en de es he hr hu it ja ko nl pl pt sk sv</language>
+    <language>en cs de es hr hu it ja ko nl pl pt sv tr</language>
     <platform>all</platform>
     <license>MIT</license>
     <website>https://www.netflix.com</website>
@@ -1350,35 +1401,30 @@ v5.2.14 (2017-01-23)
     <forum>https://forum.kodi.tv/showthread.php?tid=329767</forum>
     <source>https://github.com/CastagnaIT/plugin.video.netflix</source>
     <news>
-v0.16.2 (2020-01-07)
--Improved add-on startup
--Improved loading of profiles list
--Added in expert setting a choice to speed up service or addon startup
--Fixed an issue that causing addon misbehaviour using multiple Kodi profiles
--Fixed an issue that causing addon breakage with sqlite connections
--Fixed some python 3 issues on Android
--Handled cases of metadata not available
--Permanently removed sharing Kodi videos settings between profiles
--Updated de, es, it translations
--Minor improvements
-
-v0.16.1 (2019-12-14)
--Allowed to export individual seasons to the library (manual mode)
--Dolby atmos audio streams are now specified (Kodi 19)
--Added workaround to fix skin widgets
--Handled subtitle properties for next version of InputStream Adaptive
--Introduced accurate handling of subtitles (Kodi 19)
--Improved handling of subtitles (Kodi 18)
--Improved return to main page from search dialog
--Improved cancel login dialog after the logout
--Improved timeout on IPC over HTTP
--Fixed an issue that showed the wrong label while browsing movies
--Fixed ParentalControl/Rating GUI on custom skins
--Fixed an issue that cause unicodedecode error on some android devices
--Fixed an issue that can cause unicodedecode error in user/password
--Added japanese language
--Updated kr, hu, pt_br, fr
--Many improvements to the code
+v1.0.0 (2020-03-06)
+-Added watched status sync with Netflix services WIP (details on github wiki)
+-Reworked add-on/kodi auto-configuration based on device and system characteristics
+-Reworked MSL service
+-Added support to MSL switch profile, this fixes very old issues:
+  -Requests are now performed with the right msl profile
+  -No more missing audio languages on non-owner profiles
+  -No more missing subtitle languages on non-owner profiles
+  -No more video not available error when main profile has age limits and other profile are set as adults
+  -You can update watched status on all profiles
+-Added workaround to fix 4k media flag with android device 4k capable
+-Added turkish language
+-Changes on nfsession profile switch in order to get the profiles cookies
+-Improved ESN generation on android devices
+-Automatically turn off omx player on raspberry (not compatible)
+-Fixed the error when opening the Export menu caused by too many exported items
+-Fixed an issue that causing delayed start of services features after start playback
+-Fixed issues with ios/tvos restrictions (but due to missing widevine library for now are not supported)
+-Fixed service databases upgrade
+-Fixed an issue that caused wrong behaviour with Reset ESN
+-Fixed an issue that caused wrong behaviour with highlighted titles
+-Fixed a rare issue that caused "stream continuity" to stop working
+-Updated jp, kr, it, pl, hu, hr, de, fr, es translations
+-A lot of other code changes
     </news>
   </extension>
 </addon>
