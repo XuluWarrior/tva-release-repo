@@ -1149,10 +1149,10 @@ Release type detection improved.</news>
   </extension>
 </addon>
 
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.0.2" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.1.0" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="2.4.2" />
+        <import addon="script.module.tulip" version="2.5.10" />
     </requires>
     <extension point="xbmc.subtitle.module" library="service.py">
     </extension>
@@ -1168,7 +1168,13 @@ Release type detection improved.</news>
         <website>http://www.subtitles.gr/</website>
         <platform>all</platform>
         <language>el</language>
-        <news>[B]3.0.X[/B]
+        <news>[B]3.1.X[/B]
+- Tweaked regexes for searches
+- Added a setting allowing users to set search and download timeouts
+- Added visual feedback when deleting function cache
+- Disabled subs4free.info
+
+[B]3.0.X[/B]
 - Removed subzxyz (subtitles were moved to opensubtitles.org)
 - Bypassed subtitles.gr/findsubtitles.eu domain completely and removed its setting
 - Added support for subs4free/subs4series, podnapisi
@@ -1342,7 +1348,7 @@ v5.2.14 (2017-01-23)
 	</extension>
 </addon>
 
-<addon id="plugin.video.netflix" name="Netflix" version="1.0.0" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
+<addon id="plugin.video.netflix" name="Netflix" version="1.1.1" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
     <import addon="script.module.addon.signals" version="0.0.3"/>
@@ -1365,8 +1371,11 @@ v5.2.14 (2017-01-23)
     <description lang="de_DE">Addon für Netflix VOD Services</description>
     <disclaimer lang="de_DE">Möglicherweise sind einge Teile dieses Addons in Ihrem Land illegal, Sie sollten dies unbedingt vor der Installation überprüfen.</disclaimer>
     <summary lang="en_GB">Netflix</summary>
-    <description lang="en_GB">Netflix VOD Services Addon</description>
-    <disclaimer lang="en_GB">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+    <description lang="en_GB">Netflix VOD Services Add-on</description>
+    <disclaimer lang="en_GB">Some parts of this add-on may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+    <summary lang="el_GR">Νέτφλιξ</summary>
+    <description lang="el_GR">Πρόσθετο υπηρεσιών κατά παραγγελία του Νέτφλιξ</description>
+    <disclaimer lang="el_GR">Ορισμένα μέρη αυτού του προσθέτου μπορεί να μην είναι νόμιμα στην χώρα που κατοικείτε - παρακαλώ ελέγξτε τους τοπικούς νόμους πριν την εγκατάσταση.</disclaimer>
     <summary lang="nl_NL">Netflix</summary>
     <description lang="nl_NL">Bekijk Netflix films en tvprogramma's in Kodi.</description>
     <disclaimer lang="nl_NL">Sommige delen van deze add-on zijn mogelijk onwettig in jouw land - raadpleeg de lokale wetgeving alvorens deze add-on te installeren.</disclaimer>
@@ -1376,8 +1385,8 @@ v5.2.14 (2017-01-23)
     <summary lang="ko_KR">Netflix</summary>
     <description lang="ko_KR">Netflix VOD 서비스애드온</description>
     <disclaimer lang="ko_KR">일부 국가에서는 이 애드온의 일부가 불법일 수도 있으니, 설치하기전 관련 법을 확인하기 바랍니다.</disclaimer>
-    <description lang="it_IT">Netflix Addon servizi VOD</description>
-    <disclaimer lang="it_IT">Alcune parti di questo addon potrebbero non essere legali nel proprio paese di residenza - si prega di verificare le leggi locali prima dell'installazione.</disclaimer>
+    <description lang="it_IT">Netflix Add-on servizi VOD</description>
+    <disclaimer lang="it_IT">Alcune parti di questo add-on potrebbero non essere legali nel proprio paese di residenza - si prega di verificare le leggi locali prima dell'installazione.</disclaimer>
     <summary lang="hu_HU">Netflix</summary>
     <description lang="hu_HU">Netflix VOD kiegészítő a Kodihoz</description>
     <disclaimer lang="hu_HU">Előfordulhat, hogy a kiegészítő néhány része nem törvényes az Ön országában - telepítés előtt tájékozódjon a helyi törvényekről.</disclaimer>
@@ -1401,30 +1410,9 @@ v5.2.14 (2017-01-23)
     <forum>https://forum.kodi.tv/showthread.php?tid=329767</forum>
     <source>https://github.com/CastagnaIT/plugin.video.netflix</source>
     <news>
-v1.0.0 (2020-03-06)
--Added watched status sync with Netflix services WIP (details on github wiki)
--Reworked add-on/kodi auto-configuration based on device and system characteristics
--Reworked MSL service
--Added support to MSL switch profile, this fixes very old issues:
-  -Requests are now performed with the right msl profile
-  -No more missing audio languages on non-owner profiles
-  -No more missing subtitle languages on non-owner profiles
-  -No more video not available error when main profile has age limits and other profile are set as adults
-  -You can update watched status on all profiles
--Added workaround to fix 4k media flag with android device 4k capable
--Added turkish language
--Changes on nfsession profile switch in order to get the profiles cookies
--Improved ESN generation on android devices
--Automatically turn off omx player on raspberry (not compatible)
--Fixed the error when opening the Export menu caused by too many exported items
--Fixed an issue that causing delayed start of services features after start playback
--Fixed issues with ios/tvos restrictions (but due to missing widevine library for now are not supported)
--Fixed service databases upgrade
--Fixed an issue that caused wrong behaviour with Reset ESN
--Fixed an issue that caused wrong behaviour with highlighted titles
--Fixed a rare issue that caused "stream continuity" to stop working
--Updated jp, kr, it, pl, hu, hr, de, fr, es translations
--A lot of other code changes
+v1.1.1 (2020-03-24)
+-Fixed critical bug caused continuous profile switching
+-Fixed unicode decode error to profile auto-selection
     </news>
   </extension>
 </addon>
