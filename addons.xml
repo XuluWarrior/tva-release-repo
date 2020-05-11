@@ -547,7 +547,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
   </extension>
 </addon>
 
-<addon id="plugin.video.freelivetv.tva" name="Free Live TV" provider-name="mhancoc7" version="0.5.6">
+<addon id="plugin.video.freelivetv.tva" name="Free Live TV" provider-name="mhancoc7" version="0.5.7">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="script.module.m7lib" version="0.1.0" />
@@ -1063,7 +1063,7 @@ Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
 
 <addon id="service.subtitles.a4ksubtitles"
        name="a4kSubtitles"
-       version="0.0.17"
+       version="0.0.28"
        provider-name="Unknown">
     <requires>
       <import addon="xbmc.python" version="2.25.0"/>
@@ -1075,7 +1075,7 @@ Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
         <summary lang="en">a4kSubtitles - Multi-Source Subtitles Addon</summary>
         <description>
 Multi-source subtitles addon optimized for Seren.
-Supports: OpenSubtitles, BSPlayer
+Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, SubDB, Subscene, Addic7ed
         </description>
         <platform>all</platform>
         <reuselanguageinvoker>true</reuselanguageinvoker>
@@ -1086,6 +1086,56 @@ Supports: OpenSubtitles, BSPlayer
             <icon>icon.png</icon>
         </assets>
         <news>
+[v0.0.28]:
+  * Attempt scrape of imdb id when missing
+  * Improve filename parsing
+  * Fix SubDB lang code
+  * Fix Podnadpisi not returning release name
+
+[v0.0.27]:
+  * Attempt to auto-fix a garbled cyrillic encoded subtitles
+  * Fix more encoding issues
+  * Ensure progress dialog close even if the addon crashes
+  * Apply color to service name in results and bold tags
+  * Show notification if imdb id is missing
+
+[v0.0.26]:
+  * Support for Addic7ed
+  * Improve cache of the last results
+  * Don't show progress when showing results from cache
+
+[v0.0.25]:
+  * Fix cancellation thread exit
+
+[v0.0.24]:
+  * Show progress dialog only for search
+
+[v0.0.23]:
+  * Add progress dialog
+  * Support cancellation
+
+[v0.0.22]:
+  * Fix meta string conversion issue
+
+[v0.0.21]:
+  * TVShow year scrape from imdb when necessary
+
+[v0.0.20]:
+  * Improve Subscene tvshow matching
+  * Extract first sub file from zips when none is matched
+  * Fix Podnadpisi not working properly for tvshows
+  * Fix non-ascii video file title issues
+  * Add tvshow tests
+
+[v0.0.19]:
+  * Update settings
+  * Fix language code suffix format in the subtitle file name
+  * Support for Subscene
+
+[v0.0.18]:
+  * Support for Podnadpisi.NET
+  * Support for SubDB
+
 [v0.0.17]:
   * Reuse KODI's Python language invoker
     * Improves performance on low-end devices when switching subtitles for best match
