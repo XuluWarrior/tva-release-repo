@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.netflix" name="Netflix" version="1.2.0" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
+<addon id="plugin.video.netflix" name="Netflix" version="1.3.1" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
     <import addon="script.module.addon.signals" version="0.0.3"/>
@@ -70,25 +70,27 @@
     <forum>https://forum.kodi.tv/showthread.php?tid=329767</forum>
     <source>https://github.com/CastagnaIT/plugin.video.netflix</source>
     <news>
-v1.2.0 (2020-04-22)
--Parental control temporary disabled due to Netflix changes
--New cache management
--Add-on now is ready to works also on systems with special chars in the system path
--Implemented profile PIN protection
--Implemented masked PIN input (Kodi 19)
--Implemented auto purge cache of expired items
--Implemented paginated list of seasons
--Implemented cache to search menu
--Implemented Up Next also with "Sync of watched status with Netflix" feature
--Add support to Python 3.8
--Add title to search page
--Add profile name to homepage title
--Add a better handling of lolomo error with sync of watched status enabled
--Add romanian, swedish translation
--Improved watched status threshold
--Improved watched status update in the GUI display
--Improved catch of possible errors in events module
-To see the full list of changes read the changelog.txt
+v1.3.1 (2020-05-17)
+Note to RPI devices: credentials will be asked again a storage problem has been fixed
+-Fixed KeyError issue
+
+v1.3.0 (2020-05-17)
+Note to RPI devices: credentials will be asked again a storage problem has been fixed
+-Reimplemented parental control
+-Add new "Top 10" menu list
+-Add support to promo video trailer for custom skins
+-Add metadata Season and Episode value to ListItem's
+-Add metadata PlotOutline and Trailer values to ListItem's
+-Continue watching is now working with Netflix watched status sync
+-Fixed wrong video framerate, caused Dolby Vision signal loss and wrong colors
+-Fixed an issue that caused a wrong watched status sync at end of playback
+-Fixed an issue that caused missing to export some new seasons
+-Fixed an issue that caused the library sync to crash in some situations
+-Fixed a possible issue that can cause a wrong audio language selection on the episodes
+-Fixed a possible issue that can cause streamcontinuity to crash due to empty subtitle data
+-Fixed non visible media-flags to tvshows
+-Updated translations en, it, pt-br, de, sv-se, hu, nl, pl
+-Minor improvements/fixes
     </news>
   </extension>
 </addon>

@@ -252,6 +252,24 @@
   </extension>
 </addon>
 
+<addon id="plugin.video.smr_link_tester" version="1.1.1" name="SMR Link Tester" provider-name="gujal">
+    <requires>
+        <import addon="xbmc.python" version="2.15.0"/>
+        <import addon="script.module.resolveurl"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>SMR Link Tester Addon</summary>
+        <description></description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+	</extension>
+</addon>
+
 <addon id="plugin.video.YouMusic" name="YouMusic" version="1.0.3" provider-name="spanky">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -316,47 +334,6 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
         <forum>https://www.tvaddons.co/forums</forum>
         <website>https://www.tvaddons.co</website>
         <source>https://github.com/tvaddonsco/plugin.program.indigo</source>
-    </extension>
-</addon>
-
-<addon id="plugin.video.resolveurl-tester" name="ResolveURL Tester" version="1.1.1" provider-name="Twilight0">
-    <requires>
-        <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="2.3.13"/>
-        <import addon="script.module.resolveurl" version="5.0.35"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="main.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <reuselanguageinvoker>false</reuselanguageinvoker>
-        <summary lang="en">ResolveURL Tester</summary>
-        <description lang="en_GB">This addon can play and test various video and audio content from various sources supported by ResolveURL library.</description>
-        <disclaimer lang="en_GB">This addon does not provide any content, its sole purpose is to resolve web urls with the help of ResolveURL library</disclaimer>
-        <language>en</language>
-        <license>GNU GPL, version 2</license>
-        <website>https://twitter.com/TwilightZer0</website>
-        <source>https://github.com/Twilight0/plugin.video.resolveurl-tester</source>
-        <size>111206</size>
-        <news>[B]1.1.1[/B] - 11-11-2019
-- Minor tweaks here and there
-- Enhanced context menu items
-- Add sleep when adding a link to wait for directory refresh
-
-[B]1.1.0[/B] - 29-05-2019
-- Added a setting to force a specific host (useful for testing universal resolvers)
-  > As url you must provide media id only
-
-[B]1.0.1[/B] - 25-05-2019
-- Added "set title and play" context menu item
-- Other minor tweaks
-
-[B]1.0.0[/B] - 16-05-2019
-- Initial version</news>
-        <assets>
-            <icon>icon.png</icon>
-        </assets>
     </extension>
 </addon>
 
@@ -547,7 +524,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
   </extension>
 </addon>
 
-<addon id="plugin.video.freelivetv.tva" name="Free Live TV" provider-name="mhancoc7" version="0.5.7">
+<addon id="plugin.video.freelivetv.tva" name="Free Live TV" provider-name="mhancoc7" version="0.5.8">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="script.module.m7lib" version="0.1.0" />
@@ -879,7 +856,7 @@ On twitter, you send me a private message to get the credentials.
 
 <addon id="plugin.video.amazon-test"
        name="Amazon VOD"
-       version="0.8.3"
+       version="0.8.4"
        provider-name="Sandmann79, Varstahl">
   <requires>
     <import addon="xbmc.python" version="2.24.0"/>
@@ -899,7 +876,7 @@ On twitter, you send me a private message to get the credentials.
   <extension point="xbmc.service" library="service.py" start="startup" />
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
-    <reuselanguageinvoker>false</reuselanguageinvoker>
+    <reuselanguageinvoker>true</reuselanguageinvoker>
     <summary lang="en_GB">Amazon Prime Video Streaming</summary>
     <summary lang="de_DE">Amazon Prime Instant Video</summary>
     <description lang="en_GB">Movies and Television Shows for Prime Members</description>
@@ -913,7 +890,8 @@ Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
     <license>GPL-3.0-or-later</license>
     <assets>
       <icon>icon.png</icon>
-      <fanart>fanart.jpg</fanart>
+      <fanart>fanart.png</fanart>
+      <clearlogo>clearlogo.png</clearlogo>
     </assets>
   </extension>
 </addon>
@@ -1063,7 +1041,7 @@ Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
 
 <addon id="service.subtitles.a4ksubtitles"
        name="a4kSubtitles"
-       version="0.0.28"
+       version="0.0.30"
        provider-name="Unknown">
     <requires>
       <import addon="xbmc.python" version="2.25.0"/>
@@ -1086,6 +1064,15 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, SubDB, Subscene, Addic7ed
             <icon>icon.png</icon>
         </assets>
         <news>
+[v0.0.30]:
+  * Add service names in ad detection
+  * Removed the option to disable cleaning of ads
+  * Add remote fetching of addic7ed data
+
+[v0.0.29]:
+  * Fix Podnadpisi download of results missing filename meta
+  * Fix last results cache not invalidated on language preferences change
+
 [v0.0.28]:
   * Attempt scrape of imdb id when missing
   * Improve filename parsing
@@ -1428,7 +1415,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 	</extension>
 </addon>
 
-<addon id="plugin.video.netflix" name="Netflix" version="1.2.0" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
+<addon id="plugin.video.netflix" name="Netflix" version="1.3.1" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
     <import addon="script.module.addon.signals" version="0.0.3"/>
@@ -1499,25 +1486,27 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <forum>https://forum.kodi.tv/showthread.php?tid=329767</forum>
     <source>https://github.com/CastagnaIT/plugin.video.netflix</source>
     <news>
-v1.2.0 (2020-04-22)
--Parental control temporary disabled due to Netflix changes
--New cache management
--Add-on now is ready to works also on systems with special chars in the system path
--Implemented profile PIN protection
--Implemented masked PIN input (Kodi 19)
--Implemented auto purge cache of expired items
--Implemented paginated list of seasons
--Implemented cache to search menu
--Implemented Up Next also with "Sync of watched status with Netflix" feature
--Add support to Python 3.8
--Add title to search page
--Add profile name to homepage title
--Add a better handling of lolomo error with sync of watched status enabled
--Add romanian, swedish translation
--Improved watched status threshold
--Improved watched status update in the GUI display
--Improved catch of possible errors in events module
-To see the full list of changes read the changelog.txt
+v1.3.1 (2020-05-17)
+Note to RPI devices: credentials will be asked again a storage problem has been fixed
+-Fixed KeyError issue
+
+v1.3.0 (2020-05-17)
+Note to RPI devices: credentials will be asked again a storage problem has been fixed
+-Reimplemented parental control
+-Add new "Top 10" menu list
+-Add support to promo video trailer for custom skins
+-Add metadata Season and Episode value to ListItem's
+-Add metadata PlotOutline and Trailer values to ListItem's
+-Continue watching is now working with Netflix watched status sync
+-Fixed wrong video framerate, caused Dolby Vision signal loss and wrong colors
+-Fixed an issue that caused a wrong watched status sync at end of playback
+-Fixed an issue that caused missing to export some new seasons
+-Fixed an issue that caused the library sync to crash in some situations
+-Fixed a possible issue that can cause a wrong audio language selection on the episodes
+-Fixed a possible issue that can cause streamcontinuity to crash due to empty subtitle data
+-Fixed non visible media-flags to tvshows
+-Updated translations en, it, pt-br, de, sv-se, hu, nl, pl
+-Minor improvements/fixes
     </news>
   </extension>
 </addon>
