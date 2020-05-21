@@ -524,7 +524,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
   </extension>
 </addon>
 
-<addon id="plugin.video.freelivetv.tva" name="Free Live TV" provider-name="mhancoc7" version="0.5.8">
+<addon id="plugin.video.freelivetv.tva" name="Free Live TV" provider-name="mhancoc7" version="0.5.9">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="script.module.m7lib" version="0.1.0" />
@@ -534,10 +534,9 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary>Free Live TV</summary>
-        <description>Please visit [COLOR lightskyblue]https://www.tvaddons.co[/COLOR] for addon support! Free Live TV!</description>
+        <description>Please support the continued development of Free Live TV by becoming a Patron [COLOR lightskyblue]https://patreon.m7kodi.dev/[/COLOR]</description>
         <platform>all</platform>
-        <forum>https://www.tvaddons.co/forums/</forum>
-        <website>https://www.tvaddons.co/</website>
+        <website>https://m7kodi.dev</website>
     </extension>
 </addon>
 
@@ -738,7 +737,7 @@ On twitter, you send me a private message to get the credentials.
     </extension>
 </addon>
 
-<addon id="plugin.video.animaltv" name="Animal TV" provider-name="mhancoc7" version="0.4.4">
+<addon id="plugin.video.animaltv" name="Animal TV" provider-name="mhancoc7" version="0.4.5">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="script.module.m7lib" version="0.1.0" />
@@ -748,8 +747,9 @@ On twitter, you send me a private message to get the credentials.
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary>Watch live streams of animals!</summary>
-        <description>Watch live streams of animals from around the world.</description>
+        <description>Please support the continued development of Animal TV by becoming a Patron [COLOR lightskyblue]https://patreon.m7kodi.dev/[/COLOR]</description>
         <platform>all</platform>
+        <website>https://m7kodi.dev</website>
     </extension>
 </addon>
 
@@ -896,7 +896,7 @@ Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
   </extension>
 </addon>
 
-<addon id="plugin.video.tubi.m7" name="Tubi" provider-name="mhancoc7" version="0.1.8">
+<addon id="plugin.video.tubi.m7" name="Tubi" provider-name="mhancoc7" version="0.1.9">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="script.module.m7lib" version="0.1.0" />
@@ -906,10 +906,9 @@ Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary>Tubi</summary>
-        <description>Please visit [COLOR lightskyblue]https://www.tvaddons.co[/COLOR] for addon support! Tubi!</description>
+        <description>Please support the continued development of Tubi by becoming a Patron [COLOR lightskyblue]https://patreon.m7kodi.dev/[/COLOR]</description>
         <platform>all</platform>
-        <forum>https://www.tvaddons.co/forums/</forum>
-        <website>https://www.tvaddons.co/</website>
+        <website>https://m7kodi.dev</website>
     </extension>
 </addon>
 
@@ -1041,7 +1040,7 @@ Diese Addon verwendet pyDes von Todd Whiteman</disclaimer>
 
 <addon id="service.subtitles.a4ksubtitles"
        name="a4kSubtitles"
-       version="0.0.30"
+       version="1.0.1"
        provider-name="Unknown">
     <requires>
       <import addon="xbmc.python" version="2.25.0"/>
@@ -1062,8 +1061,18 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, SubDB, Subscene, Addic7ed
         <source>https://github.com/newt-sc/a4kSubtitles</source>
         <assets>
             <icon>icon.png</icon>
+            <screenshot>screenshot-01.png</screenshot>
+            <screenshot>screenshot-02.png</screenshot>
+            <screenshot>screenshot-03.png</screenshot>
         </assets>
         <news>
+[v1.0.1]:
+  * Add screenshots
+
+[v1.0.0]:
+  * Invalidate BSPlayer results cache when download links expire
+  * Extraction fallback: zip -> gzip -> raw
+
 [v0.0.30]:
   * Add service names in ad detection
   * Removed the option to disable cleaning of ads
@@ -1415,7 +1424,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 	</extension>
 </addon>
 
-<addon id="plugin.video.netflix" name="Netflix" version="1.3.1" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
+<addon id="plugin.video.netflix" name="Netflix" version="1.3.2" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
     <import addon="script.module.addon.signals" version="0.0.3"/>
@@ -1486,27 +1495,13 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <forum>https://forum.kodi.tv/showthread.php?tid=329767</forum>
     <source>https://github.com/CastagnaIT/plugin.video.netflix</source>
     <news>
-v1.3.1 (2020-05-17)
-Note to RPI devices: credentials will be asked again a storage problem has been fixed
--Fixed KeyError issue
-
-v1.3.0 (2020-05-17)
-Note to RPI devices: credentials will be asked again a storage problem has been fixed
--Reimplemented parental control
--Add new "Top 10" menu list
--Add support to promo video trailer for custom skins
--Add metadata Season and Episode value to ListItem's
--Add metadata PlotOutline and Trailer values to ListItem's
--Continue watching is now working with Netflix watched status sync
--Fixed wrong video framerate, caused Dolby Vision signal loss and wrong colors
--Fixed an issue that caused a wrong watched status sync at end of playback
--Fixed an issue that caused missing to export some new seasons
--Fixed an issue that caused the library sync to crash in some situations
--Fixed a possible issue that can cause a wrong audio language selection on the episodes
--Fixed a possible issue that can cause streamcontinuity to crash due to empty subtitle data
--Fixed non visible media-flags to tvshows
--Updated translations en, it, pt-br, de, sv-se, hu, nl, pl
--Minor improvements/fixes
+v1.3.2 (2020-05-20)
+-Fixed some issues on chinese systems
+-Fixed errors on loading lists
+-Fixed missing plot in some skins
+-Fixed ESN generation (lower case issue)
+-Fixed UpNext regressions
+-Updated translations es, sv-se
     </news>
   </extension>
 </addon>
