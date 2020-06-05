@@ -1,3 +1,15 @@
+* [v1.6.0](https://github.com/newt-sc/a4kSubtitles/releases/tag/service.subtitles.a4ksubtitles%2Fservice.subtitles.a4ksubtitles-1.6.0):
+  * Add option to auto download first subtitle result silently
+
+* [v1.5.0](https://github.com/newt-sc/a4kSubtitles/releases/tag/service.subtitles.a4ksubtitles%2Fservice.subtitles.a4ksubtitles-1.5.0):
+  * Auto open search dialog only on movie and tvshow videos
+
+* [v1.4.0](https://github.com/newt-sc/a4kSubtitles/releases/tag/service.subtitles.a4ksubtitles%2Fservice.subtitles.a4ksubtitles-1.4.0):
+  * Add option to auto open the search dialog when the video does not have subtitles
+
+* [v1.3.0](https://github.com/newt-sc/a4kSubtitles/releases/tag/service.subtitles.a4ksubtitles%2Fservice.subtitles.a4ksubtitles-1.3.0):
+  * Improve tvshow year scraping
+
 * [v1.2.0](https://github.com/newt-sc/a4kSubtitles/releases/tag/service.subtitles.a4ksubtitles%2Fservice.subtitles.a4ksubtitles-1.2.0):
   * Use internal ZipFile for extraction with a fallback to vfs.libarchive
 
