@@ -1,3 +1,23 @@
+[B]3.2.4[/B]
+- More bug fixes for vipsubs.gr (failure to load nested zip on Android)
+- Removed builtin methods from other provides
+
+[B]3.2.3[/B]
+- Bug fixes for vipsubs.gr
+
+[B]3.2.2[/B]
+- Do not allow random choice when not necessary
+
+[B]3.2.1[/B]
+- Added capability for nested zips on vipsubs.gr
+- Skip certain results not containing subtitles on vipsubs.gr
+
+[B]3.2.0[/B]
+- Bumped dependencies
+- Improved cache clear function
+- Added vipsubs.gr
+- Lots of bug fixes
+
 [B]3.1.X[/B]
 - Tweaked regexes for searches
 - Added a setting allowing users to set search and download timeouts
