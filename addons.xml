@@ -1392,10 +1392,10 @@ Release type detection improved.</news>
   </extension>
 </addon>
 
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.2.4" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.2.5" provider-name="Twilight0">
     <requires>
-        <import addon="xbmc.python" version="2.24.0"/>
-        <import addon="script.module.tulip" version="2.7.1" />
+        <import addon="xbmc.addon" version="16.1.000"/>
+        <import addon="script.module.tulip" version="2.8.1" />
     </requires>
     <extension point="xbmc.subtitle.module" library="service.py">
     </extension>
@@ -1410,7 +1410,10 @@ Release type detection improved.</news>
         <license>GPL-3.0-only</license>
         <website>http://www.subtitles.gr/</website>
         <platform>all</platform>
-        <news>[B]3.2.4[/B]
+        <news>[B]3.2.5[/B]
+- Tweaked imports
+
+[B]3.2.4[/B]
 - More bug fixes for vipsubs.gr (failure to load nested zip on Android)
 - Removed builtin methods from other provides
 
@@ -1522,7 +1525,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 	</extension>
 </addon>
 
-<addon id="plugin.video.netflix" name="Netflix" version="1.10.1" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
+<addon id="plugin.video.netflix" name="Netflix" version="1.11.0" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
     <import addon="script.module.addon.signals" version="0.0.3"/>
@@ -1604,20 +1607,24 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <platform>all</platform>
     <license>MIT</license>
     <website>https://www.netflix.com</website>
-    <email></email>
+    <email/>
     <forum>https://forum.kodi.tv/showthread.php?tid=329767</forum>
     <source>https://github.com/CastagnaIT/plugin.video.netflix</source>
     <news>
-v1.10.1 (2020-10-24)
-- Improved watched status, now videos will be marked as watched correctly (Kodi 19 all cases/Kodi 18 library only)
-- Improved loading video lists speed on slow hdd/sdcard
-- Updated some MSL endpoints
-- Implemented clean library by directory (Kodi 19)
-- Fixed problems with skins that cause add-on problems due to extrafanart
-- Fixed broken profile switch when profile autoselection was enabled
-- Fixed wrong time position sent to netflix server when player seek
-- Fixed notification error when playback a video with no subtitles (Kodi 19)
-- Add Galicial translation
+v1.11.0 (2020-11-14)
+- Reworked Audio/Subtitles language features
+  - Add support to Kodi player audio setting "Media default" (use NF profile language)
+  - Add setting to force the display subtitles only with the audio language set
+  - Add setting to always show subtitles when the preferred audio language is not available (Kodi 19 only)
+  - Add setting to prefer audio/subtitles with country code (Kodi 19 only)
+  - Add setting to prefer stereo audio tracks (instead of multichannels)
+- Add check for video availability
+- Add support to NFAuthentication for MacOS
+- Add workaround to HTTP connection problem blocking the add-on service
+- Fixed wrong resume time after manual seek (when nf sync enabled)
+- Fixed login/addon open error due to json parsing error
+- Updated translations it, jp, kr, tr, gr, ro, fr, hu, pl, de, zh-cn, pt-br
+- Others minor fixes
     </news>
   </extension>
 </addon>
@@ -1912,5 +1919,37 @@ Thank's to Adulescente for hard testing
         <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
         <website>http://www.tvaddons.co/forum/</website>
     </extension>
+</addon>
+
+<addon id="script.module.myaccounts" version="1.0.1" name="My Accounts" provider-name="Venom, Fen">
+	<requires>
+		<import addon="xbmc.python" version="2.14.0" />
+		<import addon="script.module.requests" version="2.19.1" />
+	</requires>
+	<extension point="xbmc.python.script" library="lib/default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="lib/service.py" start="startup" />
+	<extension point="xbmc.python.module" library="lib" /> <!-- Must be placed after xbmc.python.pluginsource, otherwise the addon does not show in the repository. -->
+	<extension point="xbmc.addon.metadata">
+		<reuselanguageinvoker>false</reuselanguageinvoker>
+		<summary lang="en">My Accounts Module</summary>
+		<description>Single placeholder for all your accounts.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<forum></forum>
+		<website>https://github.com/a4k-openproject/repository.myaccounts</website>
+		<source>https://github.com/a4k-openproject/repository.myaccounts</source>
+		<disclaimer lang="en">The author is not responsible for the use of this addon. [CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot></screenshot>
+		</assets>
+		<news>
+[B][COLOR red]Initial Release - v1.0.1 – Sept. 21, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Kick off release.[/I]
+		</news>
+	</extension>
 </addon>
 </addons>
