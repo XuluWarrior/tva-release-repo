@@ -1,3 +1,5 @@
+v.1.0.4 = updated
+
 v.1.0.3 = list updated
 
 v1.0.2 = list updated & code changes.

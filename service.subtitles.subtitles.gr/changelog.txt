@@ -1,3 +1,13 @@
+[B]3.4.0 - 3.4.1[/B]
+- Code related tweaks, particularly how routing is handled
+- Added ability to save subtitles and/or zips from sources
+
+[B]3.3.1[/B]
+- Added the forgotten string
+
+[B]3.3.0[/B]
+- Improved search query function, added accompanying option
+
 [B]3.2.5[/B]
 - Tweaked imports
 

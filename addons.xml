@@ -287,7 +287,7 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.YouMusic" name="YouMusic" version="1.0.3" provider-name="spanky">
+<addon id="plugin.video.YouMusic" name="YouMusic" version="1.0.4" provider-name="spanky">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="plugin.video.youtube"/>
@@ -299,10 +299,10 @@
     <language>en</language>
     <summary lang="en">Watch All The Best Music Videos On YouTube. </summary>
     <description lang="en">Watch All The Best Music Videos From YouTube With YouMusic
-        [COLOR blue]Brought to you In association with TVADDONS.ag[/COLOR]
+        [COLOR blue]Brought to you In association with TVADDONS.co[/COLOR]
 	</description>
-    <disclaimer lang="en">[COLOR blue]Please Visit TvAddons.ag For Support[/COLOR]
-        [COLOR red]forums.tvaddons.ag/tvaddons-ag-addon-repository/46413-youmusic[/COLOR]
+    <disclaimer lang="en">[COLOR blue]Please Visit TvAddons.co For Support[/COLOR]
+        [COLOR red]forums.tvaddons.co[/COLOR]
     </disclaimer>
     <platform>all</platform>
   </extension>
@@ -1021,7 +1021,7 @@ On twitter, you send me a private message to get the credentials.
   </extension>
 </addon>
 
-<addon id="plugin.video.YouTube_Vault" name="YouTube Vault" version="1.1.4" provider-name="Tvaddons">
+<addon id="plugin.video.YouTube_Vault" name="YouTube Vault" version="1.1.5" provider-name="Tvaddons">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="plugin.video.youtube"/>
@@ -1135,11 +1135,11 @@ On twitter, you send me a private message to get the credentials.
 
 <addon id="service.subtitles.a4ksubtitles"
        name="a4kSubtitles"
-       version="1.7.2"
+       version="2.1.0"
        provider-name="Unknown">
     <requires>
-      <import addon="vfs.libarchive"/>
       <import addon="script.module.requests"/>
+      <import addon="vfs.libarchive" optional="true"/>
     </requires>
     <extension point="xbmc.subtitle.module" library="main.py"/>
     <extension point="xbmc.service" library="main_service.py" />
@@ -1147,7 +1147,7 @@ On twitter, you send me a private message to get the credentials.
         <summary lang="en">a4kSubtitles - Multi-Source Subtitles Addon</summary>
         <description>
 Multi-source subtitles addon optimized for Seren.
-Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, SubDB, Subscene, Addic7ed
+Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, Subscene, Addic7ed
         </description>
         <platform>all</platform>
         <reuselanguageinvoker>true</reuselanguageinvoker>
@@ -1161,6 +1161,17 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, SubDB, Subscene, Addic7ed
             <screenshot>screenshot-03.png</screenshot>
         </assets>
         <news>
+[v2.1.0]:
+  * Fix Persian search in Subscene
+
+[v2.0.0]:
+  * Use IMDb as main source for all meta.
+  * Retry on 503 (Service Unavailable). OpenSubtitles and Subscene seems to return it occasionally.
+
+[v1.8.0]:
+  * Remove SubDb (Site is down)
+  * Make lib vfs optional since there are fallbacks and it is used as last case scenario. Thus making the addon installable on platforms which are not supported by lib vfs.
+
 [v1.7.2]:
   * Improve results sort based on title match
 
@@ -1421,7 +1432,7 @@ Release type detection improved.</news>
   </extension>
 </addon>
 
-<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.2.5" provider-name="Twilight0">
+<addon id="service.subtitles.subtitles.gr" name="Subtitles.gr" version="3.4.1" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.addon" version="16.1.000"/>
         <import addon="script.module.tulip" version="2.8.1" />
@@ -1438,8 +1449,19 @@ Release type detection improved.</news>
         <disclaimer lang="el_GR">Υπηρεσία μόνο ελληνικών υποτίτλων. Δεν έχει δημοσιευθεί ούτε εγκριθεί από οποιοδήποτε υποστηριζόμενο ιστότοπο.</disclaimer>
         <license>GPL-3.0-only</license>
         <website>http://www.subtitles.gr/</website>
+        <source>https://github.com/Twilight0/service.subtitles.subtitles.gr/</source>
         <platform>all</platform>
-        <news>[B]3.2.5[/B]
+        <news>[B]3.4.0 - 3.4.1[/B]
+- Code related tweaks, particularly how routing is handled
+- Added ability to save locally subtitles and/or zips from sources
+
+[B]3.3.1[/B]
+- Added the forgotten string
+
+[B]3.3.0[/B]
+- Improved search query function, added accompanying option
+
+[B]3.2.5[/B]
 - Tweaked imports
 
 [B]3.2.4[/B]
@@ -1554,7 +1576,7 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 	</extension>
 </addon>
 
-<addon id="plugin.video.netflix" name="Netflix" version="1.12.0" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
+<addon id="plugin.video.netflix" name="Netflix" version="1.12.1" provider-name="libdev + jojo + asciidisco + caphm + castagnait">
   <requires>
     <import addon="xbmc.python" version="2.26.0"/>
     <import addon="script.module.addon.signals" version="0.0.3"/>
@@ -1636,26 +1658,13 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
     <platform>all</platform>
     <license>MIT</license>
     <website>https://www.netflix.com</website>
-    <email/>
+    <email></email>
     <forum>https://forum.kodi.tv/showthread.php?tid=329767</forum>
     <source>https://github.com/CastagnaIT/plugin.video.netflix</source>
     <news>
-v1.12.0 (2020-12-13)
-- &gt;&gt; END OF THE ADD-ON DEVELOPMENT ON KODI 18.x
-- &gt;&gt; ON KODI 18.x THE ADD-ON WILL RECEIVE ONLY BUG FIX OR MINOR CHANGES
-- Add more options to force Widevine L3 (android)
-- Improved errors messages to resolve:
-  - This title is not available to watch instantly
-  - Request failed validation during key exchange
-- Reverted "reworked Audio/Subtitles language features" on Kodi 18
-- Fix missing default audio track for impaired (Kodi 19)
-- Fixed "Prefer audio/subtitles language with country code" (Kodi 19)
-- Parental control moved to profiles list context menu
-- Fixed ESN generation with modelgroup
-- Fixed build_media_tag exception due to video pause
-- Blocked profile switching while playing, can cause issues
-- Managed wrong password case on login that caused http error 500
-- Updated translations it, de, gr, pt-br, hu, ro, es, jp, kr, fr
+v1.12.1 (2021-01-02)
+- Fixed an issue that not allow to use same profile to play videos with UpNext
+- Disabled UpNext when play STRM of a shared path (Wiki: Share STRM library with multiple devices - OPTION 2)
     </news>
   </extension>
 </addon>
@@ -1722,7 +1731,7 @@ v1.12.0 (2020-12-13)
   </extension>
 </addon>
 
-<addon id="plugin.video.LiveTube" name="Live Tube" version="1.0.4" provider-name="Tvaddons">
+<addon id="plugin.video.LiveTube" name="Live Tube" version="1.0.5" provider-name="Tvaddons">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="plugin.video.youtube"/>
