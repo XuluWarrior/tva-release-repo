@@ -1,3 +1,38 @@
+[B]3.7.0[/B]
+- Increase maximum possible timeout for search requests
+- Add separate setting for subtitles.gr sub download timeout
+- Utilize fuzzywuzzy to find synced subtitles (minimum match ratio 50, default 75, max 100)
+- Replace futures module with tulip solution
+- Various other tweaks
+
+[B]3.6.2[/B]
+- Bug fixes for subtitles save function on vipsubs
+
+[B]3.6.1[/B]
+- Broaden search results for vipsubs.gr
+- Allow subtitle to be saved both locally and within the manual choice
+- Ask before overwriting existing subs
+
+[B]3.6.0[/B]
+- Allow download of the subtitle next to the playing item (for locally saved videos)
+- Extract zips upon save
+- Fix for saved files
+- Improve results for locally saved files
+- Some bug fixes (xsubs.tv)
+
+[B]3.5.1[/B]
+- Logging tweaks on vipsubs
+- Force unicode search strings
+- Make futures optional to help installation for certain cases (Kodi 19)
+- Reduce number of concurrent threads (max 5)
+
+[B]3.5.0[/B]
+- Change caching method
+- Kodi 19+ related fixes
+- Remove prompt for libarchive installation
+- Increased cache durations for the given functions
+- Improve performance with futures instead of arbitrary ranges on workers
+
 [B]3.4.0 - 3.4.1[/B]
 - Code related tweaks, particularly how routing is handled
 - Added ability to save subtitles and/or zips from sources
