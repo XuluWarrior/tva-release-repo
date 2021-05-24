@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.imagotv" version="1.4.0" name="ImagoTV"
+provider-name="Thomas B.">
+<requires>
+  <import addon="xbmc.python" version="2.26.0"/>
+  <import addon="script.module.beautifulsoup4" version="4.6.2"/>
+  <import addon="script.module.requests" version="2.22.0"/>
+  <import addon="plugin.video.arteplussept" version="1.0.2"/>
+  <import addon="plugin.video.dailymotion_com" version="2.4.1"/>
+  <import addon="plugin.video.peertube" version="1.0.0"/>
+  <import addon="plugin.video.vimeo" version="5.1.4"/>
+  <import addon="plugin.video.youtube" version="6.7.0"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary lang="fr">Extension vidéo de la plateforme ImagoTV</summary>
+  <description lang="fr_FR">ImagoTV est la plateforme vidéo de la transition</description>
+  <disclaimer lang="fr_FR">Cette extension n'est pas développée par ImagoTV.</disclaimer>
+  <summary lang="en">Video add-on for the Imago TV platform</summary>
+  <description lang="en_GB">ImagoTV is the video service of the transition</description>
+  <disclaimer lang="en_GB">This add-on is not developed by ImagoTV.</disclaimer>
+  <language>fr</language>
+  <license>GPL-3.0-or-later</license>
+  <website>https://imagotv.fr/</website>
+  <source>https://framagit.org/imago/plugin.video.imagotv</source>
+  <assets>
+    <icon>resources/icon.png</icon>
+    <fanart>resources/fanart.png</fanart>
+  </assets>
+  <news>v1.4.0 (05/04/2021)
+
+Nouvelles fonctionnalités :
+- Les vidéos hébergées sur PeerTube peuvent maintenant être lues
+
+==== English version ====
+
+New features:
+- Support the videos hosted on PeerTube</news>
+</extension>
+</addon>
