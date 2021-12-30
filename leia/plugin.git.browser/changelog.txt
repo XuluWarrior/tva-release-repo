@@ -1,5 +1,6 @@
-v2.0.0
-- Matrix support
+v1.2.2
+- Correct query syntax for GitHub requests
+- Fixed soupsieve import
 
 v1.2.1
 - Correct for currupt batch installer files

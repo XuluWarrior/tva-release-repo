@@ -1255,11 +1255,11 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
 	</extension>
 </addon>
 
-<addon id="plugin.git.browser" version="2.0.0" name="Git Browser" author="tvaddons">
+<addon id="plugin.git.browser" version="1.2.2" name="Git Browser" author="tvaddons">
     <requires>
-        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.module.requests" />
-        <import addon="script.module.commoncore" />
+        <import addon="script.module.myconnpy" option="true"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="addon.py">
         <provides>executable</provides>
@@ -1273,11 +1273,6 @@ Kodi is a registered trademark of the XBMC Foundation. We are not connected to o
         <platform>all</platform>
         <forum>https://www.tvaddons.co/forums</forum>
         <website>https://www.tvaddons.co</website>
-        <assets>
-            <icon>resources/artwork/icon.png</icon>
-            <fanart>resources/artwork/fanart.jpg</fanart>
-            <screenshot>resources/artwork/screenshot.jpg</screenshot>
-        </assets>
     </extension>
 </addon>
 
